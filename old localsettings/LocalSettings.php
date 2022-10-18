@@ -26,7 +26,7 @@ $wgMetaNamespace = "Team_2_Wiki";
 ## For more information on customizing the URLs
 ## (like /w/index.php/Page_title to /wiki/Page_title) please see:
 ## https://www.mediawiki.org/wiki/Manual:Short_URL
-$wgScriptPath = "/mediawiki";
+$wgScriptPath = "";
 $wgScriptExtension = ".php";
 
 ## The protocol and server name to use in fully-qualified URLs
@@ -42,7 +42,7 @@ $wgLogo = "$wgResourceBasePath/resources/assets/wiki.png";
 
 ## UPO means: this is also a user preference option
 
-$wgEnableEmail = false;
+$wgEnableEmail = true;
 $wgEnableUserEmail = true; # UPO
 
 $wgEmergencyContact = "apache@18.210.1.232";
@@ -100,19 +100,19 @@ $wgShellLocale = "en_US.utf8";
 # Site language code, should be one of the list in ./languages/Names.php
 $wgLanguageCode = "en";
 
-$wgSecretKey = "030966b457f81dcba84261a30d089ef2df6d2b26d1f9eee84aefef2ff062b624";
+$wgSecretKey = "676a786b25a04785fcc00218c1631f0ab4793fe6a9ea241843d2c787dfbe87df";
 
 # Site upgrade key. Must be set to a string (default provided) to turn on the
 # web installer while LocalSettings.php is in place
-$wgUpgradeKey = "bf5e317c5a7a8260";
+$wgUpgradeKey = "2e4573bb535872cc";
 
 ## For attaching licensing metadata to pages, and displaying an
 ## appropriate copyright notice / icon. GNU Free Documentation
 ## License and Creative Commons licenses are supported so far.
 $wgRightsPage = ""; # Set to the title of a wiki page that describes your license/copyright
 $wgRightsUrl = "";
-$wgRightsText = "Public Domain";
-$wgRightsIcon = "$wgResourceBasePath/resources/assets/licenses/public-domain.png";
+$wgRightsText = "";
+$wgRightsIcon = "";
 
 # Path to the GNU diff3 utility. Used for conflict resolution.
 $wgDiff3 = "/usr/bin/diff3";
@@ -133,6 +133,9 @@ wfLoadSkin( 'Vector' );
 # but check specific extension documentation for more details
 # The following extensions were automatically enabled:
 wfLoadExtension( 'PdfHandler' );
+wfLoadExtension( 'Renameuser' );
+wfLoadExtension( 'SpamBlacklist' );
+wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 wfLoadExtension( 'WikiEditor' );
 
 
